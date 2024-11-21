@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você foi hackeado!</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20%;
+            animation: blood 1s infinite alternate;
+        }
+        @keyframes blood {
+            from {
+                text-shadow: 0 0 10px red, 0 0 20px darkred;
+            }
+            to {
+                text-shadow: 0 0 30px crimson, 0 0 60px darkred;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>VOCÊ FOI HACKEADO!</h1>
+    <script>
+        // Simula o "desligamento"
+        setTimeout(() => {
+            document.body.innerHTML = "<h1 style='color:white;'>Desligando...</h1>";
+            document.body.style.backgroundColor = "black";
+            setTimeout(() => {
+                document.body.innerHTML = "<h1 style='color:lime;'>Pegadinha! 😄</h1>";
+                document.body.style.backgroundColor = "black";
+            }, 10000); // Volta ao normal após 10 segundos
+        }, 3000); // Aparece após 3 segundos
+    </script>
+</body>
+      </html>
